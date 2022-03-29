@@ -4,7 +4,6 @@ function tabs() {
         tabsParent = document.querySelector('.tabheader__items');
 
     function hideTabContent() {
-
         tabsContent.forEach(item => {
             item.classList.add('hide');
             item.classList.remove('show', 'fade');
@@ -26,6 +25,7 @@ function tabs() {
 
     tabsParent.addEventListener('click', function (event) {
         const target = event.target;
+        
         if (target && target.classList.contains('tabheader__item')) {
             tabs.forEach((item, i) => {
                 if (target == item) {
