@@ -6,10 +6,10 @@ Food - учебный проект Udemy
 
 ```bash
 # Загрузить репозиторий:
-git clone https://github.com/...
+git clone https://github.com/Tailler1992/Food.git
 
 # Перейти в директорию с проектом:
-cd ...
+cd Food
 
 # Установить зависимости:
 npm install
