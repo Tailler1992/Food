@@ -10,6 +10,16 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/modules/modal.js":
+/*!*********************************!*\
+  !*** ./src/js/modules/modal.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction modal() {\r\n    const modalTrigger = document.querySelectorAll('[data-modal]'),\r\n        modal = document.querySelector('.modal');\r\n\r\n    function openModal() {\r\n        modal.classList.toggle('show');\r\n        document.body.style.overflow = 'hidden';\r\n    }\r\n\r\n    modalTrigger.forEach(btn => {\r\n        btn.addEventListener('click', openModal);\r\n    });\r\n\r\n    function closeModal() {\r\n        modal.classList.toggle('show');\r\n        document.body.style.overflow = '';\r\n    }\r\n\r\n    modal.addEventListener('click', (e) => {\r\n        if (e.target === modal || e.target.getAttribute('data-close') == \"\") {\r\n            closeModal();\r\n        }\r\n    });\r\n\r\n    document.addEventListener('keydown', (e) => {\r\n        if (e.code === \"Escape\" && modal.classList.contains('show')) {\r\n            closeModal();\r\n        }\r\n    });\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modal);\n\n//# sourceURL=webpack://food/./src/js/modules/modal.js?");
+
+/***/ }),
+
 /***/ "./src/js/modules/tabs.js":
 /*!********************************!*\
   !*** ./src/js/modules/tabs.js ***!
@@ -36,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/tabs */ \"./src/js/modules/tabs.js\");\n/* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/timer */ \"./src/js/modules/timer.js\");\n\r\n\r\n\r\nwindow.addEventListener('DOMContentLoaded', function () {\r\n    (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n    (0,_modules_timer__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n});\n\n//# sourceURL=webpack://food/./src/js/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/tabs */ \"./src/js/modules/tabs.js\");\n/* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/timer */ \"./src/js/modules/timer.js\");\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/modal */ \"./src/js/modules/modal.js\");\n\r\n\r\n\r\n\r\nwindow.addEventListener('DOMContentLoaded', function () {\r\n    (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n    (0,_modules_timer__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n    (0,_modules_modal__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n});\n\n//# sourceURL=webpack://food/./src/js/script.js?");
 
 /***/ })
 
