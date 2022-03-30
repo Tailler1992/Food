@@ -1,11 +1,13 @@
 import tabs from './modules/tabs';
-import timer from './modules/timer';
 import modal from './modules/modal';
 import cards from './modules/cards';
+import slider from './modules/slider';
+import timer from './modules/timer';
 
 window.addEventListener('DOMContentLoaded', function () {
-    tabs();
-    timer();
+    tabs();    
     modal();
-    cards();
+    slider();
+    cards();    
+    timer();
 });
